@@ -3,6 +3,9 @@ Github pour l'atelier de détection collective du festival DIWO à Stereolux à 
 
 [Lien vers la présentation technique.](https://docs.google.com/presentation/d/1s3T18qGx1d3UmDFFPPqAXClwZHRb0sIQyXGvgYmdmSk/edit?usp=sharing)
 
+1. [Test pour capteur](https://create.arduino.cc/projecthub/mircemk/arduino-air-quality-monitor-with-dsm501a-sensor-b4f8fc)
+2. [Test pour Capteur poussiere DSM501](https://learn.linksprite.com/arduino/shields/use-dust-sensor-dsm501-with-arduino/)
+
 
 **Matériel**
 
@@ -24,13 +27,13 @@ Github pour l'atelier de détection collective du festival DIWO à Stereolux à 
 Librairies Arduino
 
 * Sharp Dust library [(Documentation ici)](https://github.com/luciansabo/GP2YDustSensor)
+* MySensors Arduino Library
 * U8G2
 * U8Glib
-* SD
 
 ## Obtenir des données : Configuration du capteur de poussière
 
-![Image of Dust sensor setup](https://github.com/amandamarielewis/scarred-landscapes-workshop/blob/main/images/ASSL_workshop_dustonly_bb.jpg)
+![Image of Dust sensor setup](https://github.com/amandamarielewis/scarred-landscapes-workshop/blob/main/images/img_dust_only.jpg)
 
 ## Visualisation de votre écran : Connexion de l'écran OLED
 
