@@ -5,7 +5,8 @@ Github pour l'atelier de détection collective du festival DIWO à Stereolux à 
 
 1. [Test pour capteur](https://create.arduino.cc/projecthub/mircemk/arduino-air-quality-monitor-with-dsm501a-sensor-b4f8fc)
 2. [Test pour Capteur poussiere DSM501](https://learn.linksprite.com/arduino/shields/use-dust-sensor-dsm501-with-arduino/)
-
+3. [Fiche produit capteur](https://boutique.semageek.com/fr/1464-capteur-de-poussiere-pm25-dsm501a-3002510748356.html)
+4. [teste qui marche](https://www.elecrow.com/wiki/index.php?title=Dust_Sensor-_DSM501A)
 
 **Matériel**
 
