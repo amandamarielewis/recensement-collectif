@@ -12,8 +12,8 @@
 #include <SD.h>
 
 //Initialiser notre type spécifique d'écran OLED
-//U8GLIB_SH1106_128X64 u8g(U8G_I2C_OPT_DEV_0|U8G_I2C_OPT_FAST);  // Dev 0, Fast I2C / TWI
-U8G2_SH1106_128X64_NONAME_1_HW_I2C u8g2(U8G2_R0, /* reset=*/ U8X8_PIN_NONE);
+U8GLIB_SH1106_128X64 u8g(U8G_I2C_OPT_DEV_0|U8G_I2C_OPT_FAST);  // Dev 0, Fast I2C / TWI
+//U8G2_SH1106_128X64_NONAME_1_HW_I2C u8g2(U8G2_R0, /* reset=*/ U8X8_PIN_NONE);
 
 
 const uint8_t SHARP_LED_PIN = 10;   // Sharp poussière/particle capteur Led Pin
@@ -42,7 +42,7 @@ void setup(void) {
   //dustSensor.setBaseline(0.4); // set no dust voltage according to your own experiments
   //dustSensor.setCalibrationFactor(1.1); // calibrate against precision instrument
 
-  u8g2.begin();  
+//  u8g2.begin();  
 }
 
 void loop(void) {
@@ -68,13 +68,12 @@ void loop(void) {
   } else {
     Serial.println("error opening file");
   }
-˙˙
 //Écran OLED impression poussière capteur données image boucle
 
-  u8g2.firstPage();  
+  u8g.firstPage();  
   do {
-      draw();
-  } while( u8g2.nextPage() );
+    draw();
+  } while( u8g.nextPage() );
 
   //delay before we run again
   delay(1000);
@@ -82,13 +81,10 @@ void loop(void) {
 
 void draw(void) {
   // graphic commands to redraw the complete screen should be placed here  
-   u8g2.clearBuffer();          // clear the internal memory
-   u8g2.setFont(u8g2_font_ncenB08_tr); // choose a suitable font˙
-//  u8g2.setFont(u8g_font_unifont);
-  u8g2.setFont(u8g_font_osb21);
-  u8g2.setCursor(0, 20); 
-  u8g2.print("Dust : ");
-  u8g2.print(dustSensor.getDustDensity());
-  u8g2.print(" ug/m3");
-     u8g2.clearBuffer();          // clea
+  u8g.setFont(u8g_font_unifont);
+  //u8g.setFont(u8g_font_osb21);
+  u8g.setPrintPos(0, 20); 
+  u8g.print("Dust : ");
+  u8g.print(dustSensor.getDustDensity());
+  u8g.print(" ug/m3");
 }
